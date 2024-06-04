@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Grid LayOut</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        :root{
+            --main-radius:10px;
+            --main-padding:5px;
+        }
+
+        .container{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* grid-template-rows: 0.4fr 1.5fr 1.5fr 0.4fr; */
+            /* grid-gap: 0.2rem; */
+            grid-template-areas: 
+            'box1 box2 box3 box4'
+            'box5 box6 box6 box7'
+            'box5 box8 box9 box7';
+            margin: 5px;
+            /* font-family: "Inter", sans-serif; */
+            /* font-weight: 200; */
+            /* text-transform: uppercase; */
+            /* font-size: 8px; */
+            text-align: center;
+        }
+
+        #box1{
+            grid-area: box1;
+            background-color: aquamarine;
+            /* border: 2px solid purple; */
+            /* border-radius: var(--main-radius);
+            padding-top: var(--main-padding); */
+        }
+
+        #box2{
+            grid-area: box2;
+            background-color: yellowgreen;
+            /* border: 2px solid purple; */
+        }
+        #box3{
+            grid-area: box3;
+            background-color: blue;
+            /* border: 2px solid purple; */
+        }
+        #box4{
+            grid-area: box4;
+            background-color: darkcyan;
+            /* border: 2px solid purple; */
+        }
+        #box5{
+            grid-area: box5;
+            background-color: rgba(82, 73, 86, 0.827);
+            /* border: 2px solid purple; */
+        }
+        #box6{
+            grid-area: box6;
+            background-color: greenyellow;
+            /* border: 2px solid purple; */
+        }
+        #box7{
+            grid-area: box7;
+            background-color: blueviolet;
+            /* border: 2px solid rgb(102, 86, 102); */
+        }
+        #box8{
+            grid-area: box8;
+            background-color: navy;
+            /* border: 2px solid purple; */
+        }
+        #box9{
+            grid-area: box9;
+            background-color: teal;
+            /* border: 2px solid purple; */
+        }
+
+        .box{
+            color: white;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .box-p{
+            text-align: center;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <div class="container">
+            <div id="box1" class="box">
+                <h1>Header</h1>
+                <p class="box-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Aliquam tempora obcaecati molestiae debitis pariatur harum perspiciatis explicabo esse, 
+                    voluptatem reprehenderit.</p>
+            </div>
+            <div id="box2" class="box">
+                <h1>Header</h1>
+            </div>
+            <div id="box3" class="box">
+                <h1>Header</h1>
+            </div>
+            <div id="box4" class="box">
+                <h1>Header</h1>
+            </div>
+            <div id="box5" class="box">
+                <h1>Header</h1>
+            </div>
+            <div id="box6" class="box">
+                <h1>Header</h1>
+                <p class="box-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Aliquam tempora obcaecati molestiae debitis pariatur harum perspiciatis explicabo esse, 
+                    voluptatem reprehenderit.</p>
+            </div>
+            <div id="box7" class="box">
+                <h1>Header</h1>
+            </div>
+            <div id="box8" class="box">
+                <h1>Header</h1>
+            </div>
+            <div id="box9" class="box">
+                <h1>Header</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
